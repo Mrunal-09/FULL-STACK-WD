@@ -5,23 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS1</title>
-  <style>
-    h1{
-      color: blueviolet;
-    }
-    .one{
-      color: brown;
-    }
-    #id1{
-      color:darkolivegreen;
-    }
-    
-  </style>
 </head>
+<style>
+  img{
+    width: 500px;
+    border-radius: 20px;
+    border: darkred 20px ridge; 
+    /* all in one */
+    filter: saturate(5);
+    filter:brightness(2) ;
+    border-top: lawngreen 20px solid ;
+ }
+ div{
+   background-color: red;
+  
+ }
+ span{
+  background-color: red;
+ }
+</style>
 <body>
-   <h1 class="one" id="id1" style="color: crimson;">Hello</h1>
-   <p>bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf <b class="one">shhsfhsgfh</b> kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw </p>
-   <h1><strong>INLINE CSS>ID>CLASS>ELEMENT</strong></h1>
-
+  <img src="https://www.eastasiaforum.org/wp-content/uploads/2021/08/2021-08-20T000000Z_432444740_MT1KYODO0008YT0FI_RTRMADP_3_JAPAN-S-FIGHT-AGAINST-CORONAVIRUS-scaled.jpg">
+  <div>
+    THIS IS DIV 
+  </div>
+  <hr>
+  <span>
+    THIS IS SPAN
+  </span>
+  <!-- DIV IS A BLOCK LEVEL ELEMENT
+  SPAN IS NOT A BLOCK LEVEL ELEMENT
+DIV AND SPAN IS INLINE ELEMENT(HEIGHT AND WIDTH DO NOT WORK IN INLINE ELEMENTS) -->
 </body>
 </html>
