@@ -5,29 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS1</title>
-  <!-- This is internal css.It consists of selectors-->
-  <style> 
-    /* these are id selectors */
-    #first {
-      color:indigo;
-
+  <style>
+    .one{
+      color: mediumblue;
     }
-    #second{
-      color: limegreen;
+    .two{
+      color: black;
     }
-    /* priority order=incline css>id selectors>element selectors */
-    /* you cannot assign same id multiple times but a class can be repeated multiple times so class id is used */
+    .three{
+      font-family: serif;
+      font-size: xx-large;
+      font-style: italic ;
+    }
   </style>
 </head>
 <body>
-  <h1 id="first" > HELLO EVERYBODY</h1>
-  <p>
+  <!-- you can use multiple classes together -->
+  <h1 class="one three " > HELLO EVERYBODY</h1>
+  <p class="one">
     「漢字書き順辞典」は漢字など様々な漢字の書き順（書き方）をアニメーションで提供、漢字を直接書けば自動的に認識して辞書を検索することができる無料辞典サイトです。
   </p>
-  <!-- inline css has priority over internal css -->
-  <h1 id="second"> HI EVERYBODY</h1>
-  <p>
+  <hr>
+  <h1 class="two"> HI EVERYBODY</h1>
+  <p class="two">
     「漢字書き順辞典」は漢字など様々な漢字の書き順（書き方）をアニメーションで提供、漢字を直接書けば自動的に認識して辞書を検索することができる無料辞典サイトです。
   </p>
+  <hr>
+  <div class="three">
+    bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw bjhvjsdg bjgsghjsdhg bjgehjgd hghgik jwfoakf kswegtkwe hwejtw 
+  </div>
 </body>
 </html>
