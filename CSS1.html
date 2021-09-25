@@ -7,27 +7,25 @@
   <title>CSS1</title>
   <!-- This is internal css.It consists of selectors-->
   <style> 
-    /* element selectors-it styles all the same elements together no need of adding separately */
-  h1{ 
-    /* if you don't want inline css priority to work !important */
-    color:red !important ;
-    font-size: xx-large;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif 
-  }
-  p{
-    color:hsl(0, 0%, 6%);
-    font-size:xx-large;
-  }
-  /* but everytime u can't add inline/important if you want diff heading for each ,then id selectors are created */
+    /* these are id selectors */
+    #first {
+      color:indigo;
+
+    }
+    #second{
+      color: limegreen;
+    }
+    /* priority order=incline css>id selectors>element selectors */
+    /* you cannot assign same id multiple times but a class can be repeated multiple times so class id is used */
   </style>
 </head>
 <body>
-  <h1 > HELLO EVERYBODY</h1>
+  <h1 id="first" > HELLO EVERYBODY</h1>
   <p>
     「漢字書き順辞典」は漢字など様々な漢字の書き順（書き方）をアニメーションで提供、漢字を直接書けば自動的に認識して辞書を検索することができる無料辞典サイトです。
   </p>
   <!-- inline css has priority over internal css -->
-  <h1 style="color:hotpink"> HI EVERYBODY</h1>
+  <h1 id="second"> HI EVERYBODY</h1>
   <p>
     「漢字書き順辞典」は漢字など様々な漢字の書き順（書き方）をアニメーションで提供、漢字を直接書けば自動的に認識して辞書を検索することができる無料辞典サイトです。
   </p>
