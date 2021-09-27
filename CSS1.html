@@ -4,37 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS1</title>
+  <title>CSS2</title>
+  <style>
+    div{
+      background-color: red;
+      height: 200px;
+    }
+    span{
+      height: 200px;
+      width: 200px;
+    }
+  </style>
 </head>
-<style>
-  img{
-    width: 500px;
-    border-radius: 20px;
-    border: darkred 20px ridge; 
-    /* all in one */
-    filter: saturate(5);
-    filter:brightness(2) ;
-    border-top: lawngreen 20px solid ;
- }
- div{
-   background-color: red;
-  
- }
- span{
-  background-color: red;
- }
-</style>
 <body>
-  <img src="https://www.eastasiaforum.org/wp-content/uploads/2021/08/2021-08-20T000000Z_432444740_MT1KYODO0008YT0FI_RTRMADP_3_JAPAN-S-FIGHT-AGAINST-CORONAVIRUS-scaled.jpg">
   <div>
-    THIS IS DIV 
+    This is div<br>
+    <h1><strong>POINTERS FOR BLOCK ELEMENTS-DIV </strong></h1>
+    ~Width of a block level element is 100% of the viewport width<br>
+    ~Height of a block isn't set by default<br>
+    ~Height and width can be explicitly set using CSS
+    
   </div>
   <hr>
-  <span>
-    THIS IS SPAN
+  <span style="background-color: red;">
+    This is span<br>
+    <h1><strong>POINTERS FOR INLINE ELEMENTS-SPAN</strong></h1>
+    ~Width of an inline element is dependent on the content <br>
+    ~Height of an inline isn't set by default<br>
+    ~Height and width cannot be explicitly set using CSS because it depends on the content.
+    <!-- don't use inline elements for wrapper -->
   </span>
-  <!-- DIV IS A BLOCK LEVEL ELEMENT
-  SPAN IS NOT A BLOCK LEVEL ELEMENT
-DIV AND SPAN IS INLINE ELEMENT(HEIGHT AND WIDTH DO NOT WORK IN INLINE ELEMENTS) -->
 </body>
 </html>
