@@ -7,46 +7,28 @@
   <title>CSS2</title>
   <style>
     *{
-      box-sizing:border-box;
+      background-color:blue;
+      padding:0px;
+      margin:0px;
+      text-decoration: none;
+      /* 4 imp */
     }
-    .padding{
-      background-color: red;
-      width: 300px;
-      height: 200px;
-      border: black solid ;
-      border-width:10px;
-      /*  
-      padding-top: 10px;
-      padding-left: 30px;
-      padding-right: 20px;
-      padding-bottom: 20px;
-      */
-      padding:10px 30px 20px 20px;
-      /* its shorthand go clokwise T R B L */
-      /* the size of div increases in right and bottom padding */
-      box-sizing:border-box;
-      /* by using box size element the increased size reduces it comes to actual box div */
-    }
-    .one{
-      background-color: red;
-      width: 300px;
-      height: 200px;
-      border: black solid ;
-      border-width:5px;
-      padding:50px;
-      /* for all top bottom right left  */
-      /* If two are mentioned its T,B or R,L */
+    div{
+      background-color: cornsilk;
+      height: 20px;
+      width: 60px;
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+      margin-right: 50px;
+      /* margin is space of div to viewport */
     }
 
+    
   </style>
 </head>
 <body>
-  <div class="padding">
-   Space between content and border is padding
-  </div><br>
-  <div class="one">
-    hello
-  </div>
-
+  <div>HELLO</div>
+  
 </body>
 </html>
