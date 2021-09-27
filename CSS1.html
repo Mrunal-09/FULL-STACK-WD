@@ -6,33 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS2</title>
   <style>
-    div{
+    *{
+      box-sizing:border-box;
+    }
+    .padding{
       background-color: red;
+      width: 300px;
       height: 200px;
+      border: black solid ;
+      border-width:10px;
+      /*  
+      padding-top: 10px;
+      padding-left: 30px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      */
+      padding:10px 30px 20px 20px;
+      /* its shorthand go clokwise T R B L */
+      /* the size of div increases in right and bottom padding */
+      box-sizing:border-box;
+      /* by using box size element the increased size reduces it comes to actual box div */
     }
-    span{
+    .one{
+      background-color: red;
+      width: 300px;
       height: 200px;
-      width: 200px;
+      border: black solid ;
+      border-width:5px;
+      padding:50px;
+      /* for all top bottom right left  */
+      /* If two are mentioned its T,B or R,L */
     }
+
   </style>
 </head>
 <body>
-  <div>
-    This is div<br>
-    <h1><strong>POINTERS FOR BLOCK ELEMENTS-DIV </strong></h1>
-    ~Width of a block level element is 100% of the viewport width<br>
-    ~Height of a block isn't set by default<br>
-    ~Height and width can be explicitly set using CSS
-    
+  <div class="padding">
+   Space between content and border is padding
+  </div><br>
+  <div class="one">
+    hello
   </div>
-  <hr>
-  <span style="background-color: red;">
-    This is span<br>
-    <h1><strong>POINTERS FOR INLINE ELEMENTS-SPAN</strong></h1>
-    ~Width of an inline element is dependent on the content <br>
-    ~Height of an inline isn't set by default<br>
-    ~Height and width cannot be explicitly set using CSS because it depends on the content.
-    <!-- don't use inline elements for wrapper -->
-  </span>
+
 </body>
 </html>
