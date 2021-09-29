@@ -4,40 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS1</title>
+  <title>CSS3</title>
   <style>
-    body{
-      height: 100vh;
-      width:100vw;
-    }
     *{
-      box-sizing: border-box;
+      margin:0px;
       padding:0px;
-      margin: 0px;
+      box-sizing: border-box;
+      font-size: 1.2rem;
+      /* 16px=1rem 
+      relative font size=rem
+      absolute font size=em
+      1em=16px */
+      /* use div for wrapping not span */
     }
-    .parent{
+    div{
       background-color: crimson;
-      height: 100px;
-      padding: 200px;
-      width: 80%;
+      width: 50vw;
+      height: 20vh;
+      margin: 5%;
+      text-align: center;
+      /* text align is a block property */
+      /* default text align is top left */
 
-    }
-    .child{
-      background-color:darkturquoise;
+
       
       
-
     }
   </style>
 </head>
 <body>
-  <DIV class="parent">
-    
-    <div class="child">
- Absolute units are same everywhere.<br>
- % and vw vh are used for adjust elements according to viewport
-    </div>
-
-  </DIV>
+  <div>
+    <h1>This is first heading</h1>
+</div>
+<div>
+  <h1>This is first heading</h1>
+</div>
+  
 </body>
 </html>
