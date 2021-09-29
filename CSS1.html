@@ -4,31 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS2</title>
+  <title>CSS1</title>
   <style>
+    body{
+      height: 100vh;
+      width:100vw;
+    }
     *{
-      background-color:blue;
+      box-sizing: border-box;
       padding:0px;
-      margin:0px;
-      text-decoration: none;
-      /* 4 imp */
+      margin: 0px;
     }
-    div{
-      background-color: cornsilk;
-      height: 20px;
-      width: 60px;
-      margin-top: 50px;
-      margin-left: 50px;
-      margin-bottom: 50px;
-      margin-right: 50px;
-      /* margin is space of div to viewport */
-    }
+    .parent{
+      background-color: crimson;
+      height: 100px;
+      padding: 200px;
+      width: 80%;
 
-    
+    }
+    .child{
+      background-color:darkturquoise;
+      
+      
+
+    }
   </style>
 </head>
 <body>
-  <div>HELLO</div>
-  
+  <DIV class="parent">
+    
+    <div class="child">
+ Absolute units are same everywhere.<br>
+ % and vw vh are used for adjust elements according to viewport
+    </div>
+
+  </DIV>
 </body>
 </html>
