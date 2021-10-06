@@ -12,42 +12,55 @@
       box-sizing: border-box;
   }
   .parent{
-    background-color: brown;
-    height: 70vh;
+    background-color: background: hsla(230, 95%, 51%, 1);
+
+background: linear-gradient(90deg, hsla(230, 95%, 51%, 1) 0%, hsla(58, 90%, 64%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(230, 95%, 51%, 1) 0%, hsla(58, 90%, 64%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(230, 95%, 51%, 1) 0%, hsla(58, 90%, 64%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0A33F9", endColorstr="#F6F151", GradientType=1 );;
+    min-height: 70vh;
     position: relative;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:nowrap;
   }
   .child{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 50px;
+    width: 100vw;
+    height: 50vh;
+    margin:10px;
+    display:inline-block;
+    
+    
     }
-    .firstchild{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 150px;
     
-    
-  }
-  .children{
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 250px;
-    
-    
-  }
-  
-  
-  
   </style>
 </head>
 <body>
   <DIV class="parent">
-    <div class="child" style="background-color: chartreuse;" > </div><br>
-      <div class="firstchild" style="background-color: cyan;"></div><br>
-      <div class="children" style="background-color:darkgray;"></div>
+    <div class="child" style="background-color: background: hsla(217, 100%, 50%, 1);
+
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1 ); > </div><br>
+      <div class="child" style="background-color:rgb(221, 195, 221);" ></div><br>
+      <div class="child" style="background-color:background: hsla(339, 100%, 55%, 1);
+
+      background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      
+      background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      
+      background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+      
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1 );"  ></div>
+      <div class="child" style="background-color: rgb(101, 207, 101);" > </div><br>
+      
 
 
       
