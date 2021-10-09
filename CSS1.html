@@ -6,47 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS4</title>
   <style>
-    h1{
-      background-color: darkturquoise;
+    *{
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
     }
-    h1:hover{
-      background-color: deeppink;
+    .parent{
+      background-color: black;
+      width: 100vw;
+      height: 60vh;
+    }
+    .child{
+      background-color:red;
+      width: 200px;
+      height: 200px;
+      border-radius: 600px;
+      transition-timing-function:cubic-bezier(0.97, 0.31, 0,-0.36);
+      /* change bezier curve from inspect */
+      transition-duration: 1s;
+    
+      
+     
+     
+      
+    }
+    div.parent:hover div.child{
+      background-color: blue;
       cursor: pointer;
-    }
-    h1::selection{
-      color: gold;
-    }
-    input:focus{
-      background-color: greenyellow;
-      color: hotpink;
-      font-size: 20px;
-      
-      
-    }
-    input:hover{
-      background-color: maroon;
-    }
-    h1::after{
-      content: "hello";
-      font-family: cursive;
-      font-size: 10px;
-      
-    }
-    h1::before{
-      content: "hello";
-      font-family: cursive;
-      font-size: 10px;
-      
+      /* transform: rotateY(200deg);   */
+     transform: translate(400vw); 
+      /*  transform:scale(0.2); */
     }
   </style>
 </head>
 <body>
-  <!-- PSEUDO SELECTORS
-  1)HOVER
-2)SELECTION
-3)FOCUS
-4)AFTER & BEFORE -->
-<h1>im h1</h1>
-<input type="text">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
 </body>
 </html>
