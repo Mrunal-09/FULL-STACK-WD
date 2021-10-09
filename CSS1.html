@@ -6,31 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS4</title>
   <style>
-    *{
-      padding: 0%;
-      margin: 0%;
+    h1{
+      background-color: darkturquoise;
     }
-    div.parent h1{
-      background-color: crimson;
+    h1:hover{
+      background-color: deeppink;
+      cursor: pointer;
     }
-    div.parent div{
-      background-color:cyan;
+    h1::selection{
+      color: gold;
     }
-    div.parent h1:nth-child(1){
-      background-color:darkorchid;
-      /* nx child selectors */
+    input:focus{
+      background-color: greenyellow;
+      color: hotpink;
+      font-size: 20px;
+      
+      
+    }
+    input:hover{
+      background-color: maroon;
+    }
+    h1::after{
+      content: "hello";
+      font-family: cursive;
+      font-size: 10px;
+      
+    }
+    h1::before{
+      content: "hello";
+      font-family: cursive;
+      font-size: 10px;
+      
     }
   </style>
 </head>
 <body>
-  <!-- Child SELECTOR -->
-  <div class="parent">
-    <h1>hello</h1>
-    <div>hii</div>
-    <h1>byee</h1>
-<!--  code looks cleaner-->
-  </div>
-
- 
+  <!-- PSEUDO SELECTORS
+  1)HOVER
+2)SELECTION
+3)FOCUS
+4)AFTER & BEFORE -->
+<h1>im h1</h1>
+<input type="text">
 </body>
 </html>
