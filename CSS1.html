@@ -10,30 +10,27 @@
       padding: 0%;
       margin: 0%;
     }
-    .background{
-         color: blanchedalmond;
-    }
-    h1.background{
-      background-color: blue;
-    }
-    h2.background{
-      background-color: blueviolet;
-    }
-    h3.background{
-      background-color: cornflowerblue;
-    }
-    h1.background#unique{
+    div.parent h1{
       background-color: crimson;
-      /* 3 selectors combined-id,class and element */
     }
-  
+    div.parent div{
+      background-color:cyan;
+    }
+    div.parent h1:nth-child(1){
+      background-color:darkorchid;
+      /* nx child selectors */
+    }
   </style>
 </head>
 <body>
-  <!-- COMBINED SELECTORS -->
-  <h1 class="background">I'm Heading One</h1>
-  <h1  id="unique" class="background">I'm Heading One.two</h1>
-  <h2 class="background">I'm Heading Two</h2>
-  <h3 class="background">I'm Heading Two</h3>
+  <!-- Child SELECTOR -->
+  <div class="parent">
+    <h1>hello</h1>
+    <div>hii</div>
+    <h1>byee</h1>
+<!--  code looks cleaner-->
+  </div>
+
+ 
 </body>
 </html>
