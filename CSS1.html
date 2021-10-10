@@ -4,44 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS4</title>
+  <title>transition property</title>
   <style>
-    *{
-      padding: 0px;
-      margin: 0px;
-      box-sizing: border-box;
-    }
     .parent{
       background-color: black;
       width: 100vw;
       height: 60vh;
+
     }
     .child{
-      background-color:red;
-      width: 200px;
-      height: 200px;
-      border-radius: 600px;
-      transition-timing-function:cubic-bezier(0.97, 0.31, 0,-0.36);
-      /* change bezier curve from inspect */
-      transition-duration: 1s;
-    
+      background-color: coral;
+      width: 30vw;
+      height: 20vh;
+      transition:ease;
+      transition-property:transform;
+      /* colour change  instant*/
       
-     
-     
       
+
     }
-    div.parent:hover div.child{
-      background-color: blue;
-      cursor: pointer;
-      /* transform: rotateY(200deg);   */
-     transform: translate(400vw); 
-      /*  transform:scale(0.2); */
+    div.parent:hover  div.child{
+      transform: translateX(500px);
+      background-color: cyan;
+
     }
   </style>
 </head>
 <body>
   <div class="parent">
-    <div class="child"></div>
+      <div class="child"></div>
   </div>
 </body>
 </html>
