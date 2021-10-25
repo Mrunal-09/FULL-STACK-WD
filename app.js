@@ -1,17 +1,22 @@
-var add=(a,b)=> a+b
-console.log(add(10,20))
+var button=document.querySelector('button')
+var input=document.querySelector('input')
+var list=document.querySelector('ul')
 
-const greet=name =>'Hi '+name
-console.log(greet('Mrunal'))
-
-//methods to iterate  array
-var arr=['eat','code']
-var callbackfunction=(element,age,hi)=>{
-    console.log(element,age,hi)
-}
-arr.forEach(callbackfunction)
-//called back for each element of array
-
-//arr.forEach(element) => {
-//  console.log(element)
+//const callbackfunc = (event) =>{
+  //console.log(event.target)
+  //console.log(input.value) 
+  //adds input on click in console
 //}
+
+//IMP TO DO LIST
+const callbackfunc=(event) =>{
+  const inputvalue=input.value
+  const element=document.createElement('li')
+  const textnode=document.createTextNode(inputvalue)
+  element.appendChild(textnode)
+  list.appendChild(element)
+  console.log(input.value)
+}
+
+button.addEventListener('click',callbackfunc)
+
