@@ -1,27 +1,17 @@
-//function
-function greet(operation,a,b){
-  console.log(operation,a+b)
-}
-greet('addition',1,2)
+var add=(a,b)=> a+b
+console.log(add(10,20))
 
-function hi(Name='John',age=19){
-  console.log("Hey my name is "+ Name +" and my age is "+ age +".")
-}
-hi(Name='Mrunal',age=20)
-//nan=not a number
-var add=function(a=1,b=2){
-  //function expression
-  var sum=a+b;
-  console.log(sum)
-}
-add()
-//diff between funtion expression and declaration is that func called before or after ..decl prints before also
-//expression>declaration
+const greet=name =>'Hi '+name
+console.log(greet('Mrunal'))
 
-var add=(a=1,b=2)=>{
-  //function expression
-  var sum=a+b;
-  console.log(sum)
+//methods to iterate  array
+var arr=['eat','code']
+var callbackfunction=(element,age,hi)=>{
+    console.log(element,age,hi)
 }
-add()
-//arrow function
+arr.forEach(callbackfunction)
+//called back for each element of array
+
+//arr.forEach(element) => {
+//  console.log(element)
+//}
