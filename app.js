@@ -1,43 +1,54 @@
-var button=document.querySelector('button')
-var input=document.querySelector('input')
-var list=document.querySelector('ul')
+var a=22
+let b=24
+console.log(a)
+console.log(b)
 
-var duplicates=[]
-//to not add duplicates
-
-var deleteitem=(value)=>{
-  const index =duplicates.indexOf(value)
-  //console.log(index)
-  duplicates.splice(index,1)
-  console.log(duplicates)
+if (true){
+  let Name="Ferrari"
+  console.log(Name)
 }
+//console.log(Name)
+//let variable has scope only where its declared
+//var vriable has global scope
 
-const callbackfunc=(event) =>{
-  const inputvalue=input.value
-  if(duplicates.includes(inputvalue)){
-    console.log('already exists')
+for(var i=0;i<10;i++){
+  console.log(i)
+}
+console.log(i)
+if (true){
+  let Name="Ferrari"
+  if(true){
+    console.log(Name)
   }
-  else{
-    duplicates.push(inputvalue)
-  const element=document.createElement('li')
-  const textnode=document.createTextNode(inputvalue)
-  element.appendChild(textnode)
-  list.appendChild(element)
-  console.log(input.value)
-  /*element.addEventListener('click',()=>{
-    console.log('clicked')
-  })*/
-  /*element.addEventListener('click',(e)=>{
-    console.log(e.target.innerHTML)
-  })
-  //returns the value clicked
-}*/
-element.addEventListener('click',(e)=>{ deleteitem
-(e.target.innerHTML)})
-  //to remove from array displayed on console
-  element.addEventListener('click',(e)=>{
-    e.target.remove()})
-  }  //to remove from list on screen
 }
+const print =()=>{
+  var x="xyz"
 
-button.addEventListener('click',callbackfunc)
+  if(true){
+    console.log(x)
+}
+return x
+}
+//console.log(x)
+print()
+//global scope not valid for functions
+console.log(this)
+//gives alert to window(present parent object)
+console.log(this.alert("Hi"))
+
+let car={
+ name:"Alto",
+ manufacturer:"Benz",
+ //print : function(a){ //this. car. both works
+  print: (a) =>{ //this. doesnt works
+   //console.log(a)
+   console.log(car.name+" was manufactured by "+ car.manufacturer+".")
+   //console.log(this.manufacturer)..same as car.
+ }
+}
+console.log(car)
+console.log(car.name)
+console.log(typeof car)//object
+
+car.print()
+
