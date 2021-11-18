@@ -9,6 +9,17 @@
 const table=document.querySelector('table')
 console.log(table)
 
+const createRow=(user)=>{
+  let newRow=document.createElement('tr')
+  let element= `  
+  <td>${user.id}</td>
+  <td>${user.name}</td>
+  <td>${user.email}</td>
+  <td>${user.username}</td>`
+  newRow.innerHTML=element
+  return newRow
+}
+
 fetch("https://jsonplaceholder.typicode.com/users")
 .then(value=>value.json())
 .then(data=>{
@@ -16,19 +27,19 @@ fetch("https://jsonplaceholder.typicode.com/users")
 //gives whole data
 data.forEach(user => {
   //console.log(user)
-  let newRow=document.createElement('tr')
+  //let newRow=document.createElement('tr')
   /*let dataID=document.createElement('td')
   let dataIDtextnode=document.createTextNode(user.id)//to display id ...similar will be done for name,gmail,username but not feasible
   dataID.appendChild(dataIDtextnode)
   newRow.appendChild(dataID)*/
   //so backtick is used``
-  let element= `  
+  /*let element= `  
   <td>${user.id}</td>
   <td>${user.name}</td>
   <td>${user.email}</td>
-  <td>${user.username}</td>`
+  <td>${user.username}</td>`*/
   //appendchild method only accepts node,node is object,newRow is string so cannot be appended,ie y innerhtml is used
-  newRow.innerHTML=element
-  table.appendChild(newRow)
+  //newRow.innerHTML=element
+  table.appendChild(createRow(user))
 })
 })
