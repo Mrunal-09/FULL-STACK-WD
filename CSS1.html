@@ -4,46 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="assets/app.js"></script>
   <title>TO DO LIST</title>
-  
-</head>
-<body>
-  <header>
-    <div class="mainbox">
-      <div class="todo">
-       <div>
-         TO DO LIST
-       </div>
-      <div class="button">
-        
-        <div class="circle">
-
-        </div>
-
-      </div>
-      
-    </div><br>
-    <div class="add">
-    <input type="text" placeholder="ADD TASK HERE">
-      
-      <button class="addbtn" >+</button>
-    </div><br>
-    <div class="allone">
-      <div class="items">0 items</div>
-      <div class="list">
-        <div class="all">all</div>
-        <div class="pending">pending</div>
-        <div class="completed">completed</div>
-      </div>
-      <div class="clear">clear</div>
+  <body>
+  </head></header>
+  <div class="cnt1">
+    <h1>Todo list</h1>
+    <div class="subcont1">
+        <div id="mode"><button></button></div>
     </div>
-
+</div>
+<div class="cont2">
+    <input type="text" name="task" placeholder="Add task to the list..">
+    <button id="addtask">+</button>
+</div>
+<div id="listheader">
+    <div id="totaltasks">0 tasks</div>
+    <div>
+        <div>All</div>
+        <div>Pending</div>
+        <div>Completed</div>
     </div>
-    
-      
-    </div>
-  </header>
+    <div id="clearAll">Clear</div>
+</div>
+<ul></ul>
   <footer>
     <div class="name">
       MRUNAL GOSAVI
