@@ -1,19 +1,42 @@
-const button = document.querySelector('button')
-const input = document.querySelector('input')
-const getData = async (item) => {
-  console.log(item)
-  let url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
-  console.log(url)
-  const res = await fetch(url)
-  const data = await res.json()
-  console.log()
-  data.hits.forEach(recipe => {
-      console.log(recipe)
-  })
+function truncateText(text, letters = 135) {
+	let truncatedText = text.slice(0, letters);
+	let truncatedToHTML = `<p class="truncate">${truncatedText}...</p>`;
+
+	return truncatedToHTML;
 }
 
- 
-//  add event listener to the button
-button.addEventListener('click', (e) => {
-  getData(input.value)
-}) 
+/* Select all card text containers */
+let cards = document.getElementsByClassName("card_text");
+
+/* Save texts within the cards as plain text */
+let plainText = [];
+for (let i = 0; i < cards.length; i++) {
+	plainText[i] = cards[i].innerText;
+}
+
+/* Save the original card texts */
+let htmlText = [];
+for (let i = 0; i < cards.length; i++) {
+	htmlText[i] = cards[i].innerHTML;
+}
+
+/* Add truncated text inside the cards */
+for (let i = 0; i < cards.length; i++) {
+	cards[i].innerHTML = truncateText(plainText[i]);
+}
+
+/* Add events to all buttons */
+let btns = document.getElementsByClassName("card_btn");
+
+for (let i = 0; i < cards.length; i++) {
+	btns[i].addEventListener("click", function () {
+		/* If the first child in the card text container has 'truncate' class... */
+		if (cards[i].firstChild.className == "truncate") {
+			/* Add their full text */
+			cards[i].innerHTML = htmlText[i];
+		} else {
+			/* Add their truncated text */
+			cards[i].innerHTML = truncateText(plainText[i]);
+		}
+	});
+}
