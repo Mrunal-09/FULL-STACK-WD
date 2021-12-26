@@ -1,17 +1,10 @@
-//console.log(document)//works only in dom
-//console.log(Window) //only in dom-browser
-//setTimeout(() => {
- // console.log('hi')
-//},5000) //set timeout runs in v8 engine
-const greet=()=>{}
-module.exports.something=greet
-console.log('hello')
-const add=(a,b)=>{
-  let z= a+b
-  console.log(z)
-}
-const sub=()=>{
-  console.log("I subtract")
-}
-module.exports.add=add //function is exported
-module.exports.sub=sub
+const button=document.querySelector('button')
+const input=document.querySelector('input')
+const div=document.querySelector('div')
+
+div.innerHTML=localStorage.getItem('Inputvalue')
+
+button.addEventListener('click',()=>{
+  localStorage.setItem('Inputvalue',input.value)
+  div.innerHTML=input.value
+})
