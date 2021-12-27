@@ -1,16 +1,15 @@
-const path= require('path')
+const { error } = require('console')
+const fs=require('fs')
+//console.log(fs)
+console.log('hi1')
+fs.readFile('./test.txt',(error,data)=>{
+  if(error)console.log(error)
+  else console.log(data.toString()) //to convert buffer to string
+}) //reads file//nonblocking
+console.log('hi2')
+console.log(fs.readFileSync('./test.txt','utf8'))//utf8 gives encoded version of string-(reads file) //blockling
+console.log('hi3')
 
-//console.log(path.resolve('./index.js')) //gives full  absolute path from root
-
-//console.log(path.relative("./","./index.js")) //gives path relative to ur current directory
-
-//console.log(path.extname('./index.js'))//gives extension
-
-//console.log(path.dirname('./FULL STACK WD/index.js'))//returns directory name
-
-//console.log(__dirname) //same to resolve
-
-console.log(path.join(__dirname,'index.js'))//joins dirname to index.js
-
-
-
+fs.writeFile('./test.txt','hello',(error)=>{
+  if(error)console.log(error)
+})//to write in file
