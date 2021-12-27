@@ -1,0 +1,23 @@
+{
+  "name": "full-stack-wd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrunal-09/FULL-STACK-WD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrunal-09/FULL-STACK-WD/issues"
+  },
+  "homepage": "https://github.com/Mrunal-09/FULL-STACK-WD#readme",
+  "description": "",
+  "dependencies": { //libraries
+    "axios": "^0.24.0",
+    "express": "^4.17.2"
+  }
+}
