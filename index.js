@@ -1,8 +1,16 @@
-const button=document.querySelector('button')
-const input=document.querySelector('input')
-const div=document.querySelector('div')
+const path= require('path')
 
-const arr=[1,2,3,4,5]
-localStorage.setItem('val',JSON.stringify(arr))
+//console.log(path.resolve('./index.js')) //gives full  absolute path from root
 
-console.log(JSON.parse(localStorage.getItem('val')))
+//console.log(path.relative("./","./index.js")) //gives path relative to ur current directory
+
+//console.log(path.extname('./index.js'))//gives extension
+
+//console.log(path.dirname('./FULL STACK WD/index.js'))//returns directory name
+
+//console.log(__dirname) //same to resolve
+
+console.log(path.join(__dirname,'index.js'))//joins dirname to index.js
+
+
+
