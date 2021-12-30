@@ -1,29 +1,24 @@
-/*const express=require('express')
+const express = require("express")
+const PORT=3000
+
 const app=express()
-
-app.get('/server.js', (req,res) =>{
-  //console.log(req)
-  res.send('This is response')
+console.log(express)
+app.get('/',(req,res)=>{
+  res.send("GET")
 })
-app.get('/login', (req,res) =>{
-  //console.log(req)
-  res.send('This is login')
+app.post('/',(req,res)=>{
+  res.send("POST")
 })
-app.get('/signup', (req,res) =>{
-  //console.log(req)
-  res.send('This is signup')
+app.put('/',(req,res)=>{
+  res.send("PUT")
 })
-app.listen(3000,()=>{
-  console.log("server listening at port 3000")
-})*/
-
-const data=[{name:"Mrunal"},{name:"Chinmay"},{name:"Akash"}]
-const express=require('express')
-const app=express()
-app.get('/getnames',(req,res)=>{
-  res.send(data)
+app.patch('/',(req,res)=>{
+  res.send("PATCH")
 })
-
-app.listen(3000,()=>{
-  console.log("server listening at port 3000")
-})   
+app.delete('/',(req,res)=>{
+  res.send("DELETE")
+})
+app.listen(PORT,()=>{
+  console.log(`Server running at port $(PORT)`)
+})
+//module.exports=()=>{}
