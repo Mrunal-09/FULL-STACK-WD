@@ -3,13 +3,20 @@ const PORT=3000
 const app=express()
 //console.log(express)
 
-const verify =(req,res,next)=>{
-  if (req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)") next()
-  else res.send("BLOCKED")
-} //middleware is executed before callback,it is there to make actual function clutterfree
-//each request has to go through middleware
-app.get('/',verify,(req,res)=>{
-  res.send("Verified")
+//const isverified=()=>{}
+const isAdmin=(req,res,next)=>{
+  if (req.headers.admin==='true') next()
+  else res.send('UNAUTHORIZED')
+}
+
+app.get('/public',isAdmin,(req,res)=>{
+  res.send("I'm a public route")
+ 
+})
+
+
+app.get('/private',isAdmin,(req,res)=>{
+  res.send("I'm a private route")
 })
 
 
