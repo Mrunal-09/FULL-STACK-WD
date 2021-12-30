@@ -1,16 +1,18 @@
 const express = require("express")
 const PORT=3000
-
 const app=express()
-console.log(express)
-app.get('/',(req,res)=>{
-  console.log(req.headers.host)
-  if (req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)")res.send("GET")
+//console.log(express)
+
+const verify =(req,res,next)=>{
+  if (req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)") next()
   else res.send("BLOCKED")
+} //middleware is executed before callback,it is there to make actual function clutterfree
+//each request has to go through middleware
+app.get('/',verify,(req,res)=>{
+  res.send("Verified")
 })
-//header is extra info of requests -user-agent,host etc
+
 
 app.listen(PORT,()=>{
   console.log(`Server running at port $(PORT)`)
 })
-//module.exports=()=>{}
