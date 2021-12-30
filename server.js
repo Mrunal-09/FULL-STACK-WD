@@ -1,25 +1,16 @@
 const express = require("express")
 const PORT=3000
 const app=express()
-//console.log(express)
 
-//const isverified=()=>{}
-const isAdmin=(req,res,next)=>{
-  if (req.headers.admin==='true') next()
-  else res.send('UNAUTHORIZED')
-}
+app.use(express.json())//used as middleware ,same as that of json.parse ..giving data of req body
 
-app.get('/public',isAdmin,(req,res)=>{
-  res.send("I'm a public route")
- 
-})
-
-
-app.get('/private',isAdmin,(req,res)=>{
-  res.send("I'm a private route")
+app.post('/signup',express.json(),(req,res)=>{
+    console.log(req.body)
+    res.send('dadada')
 })
 
 
 app.listen(PORT,()=>{
   console.log(`Server running at port $(PORT)`)
 })
+//data added to request header/body in thunderclient is seen in terminal running req
