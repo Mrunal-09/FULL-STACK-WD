@@ -8,13 +8,20 @@
   
 </head>
 <body>
-  <h1>I,m a heading</h1>
-  <img src="https://images.unsplash.com/photo-1604085572504-a392ddf0d86a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8b3JhbmdlJTIwZmxvd2VyfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=" "/>
-  <div>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa amet officiis sequi placeat possimus deleniti, asperiores rem praesentium debitis eum natus vitae fugiat. Maxime impedit veritatis ipsum voluptatibus id sequi.
-  </div>
+  <ul></ul>
   <script>
-    window.alert("I'm a response")
-  </script>
+    fetch("http://localhost:3000/getnames")
+    .then((res)=>res.json())
+    .then((data)=>{
+      console.log(data);
+      let list =document.querySelector("ul");
+      data.forEach((item) => {
+        list.append(item.name);
+      });
+  });
+  
+    
+  
+    </script>
 </body>
 </html>
