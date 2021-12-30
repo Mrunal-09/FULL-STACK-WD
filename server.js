@@ -4,20 +4,12 @@ const PORT=3000
 const app=express()
 console.log(express)
 app.get('/',(req,res)=>{
-  res.send("GET")
+  console.log(req.headers.host)
+  if (req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)")res.send("GET")
+  else res.send("BLOCKED")
 })
-app.post('/',(req,res)=>{
-  res.send("POST")
-})
-app.put('/',(req,res)=>{
-  res.send("PUT")
-})
-app.patch('/',(req,res)=>{
-  res.send("PATCH")
-})
-app.delete('/',(req,res)=>{
-  res.send("DELETE")
-})
+//header is extra info of requests -user-agent,host etc
+
 app.listen(PORT,()=>{
   console.log(`Server running at port $(PORT)`)
 })
